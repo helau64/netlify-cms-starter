@@ -11,19 +11,14 @@
       <meta name="description" content="{{description}}"/>
     {% endif %}
     {% block head %}{% endblock %}
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+    {% include "partials/navbar.html" %}
 
     {{ content | safe }}
 
-    {% include "./partials/footer.html" %}
-
-    <script src="/static/js/alpine.js"></script>
+    {% include "partials/footer.html" %}
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
@@ -32,4 +27,5 @@
     {% endif %}
 
   </body>
+  <script src="/assets/dist/js/main.min.js"></script>
 </html>
