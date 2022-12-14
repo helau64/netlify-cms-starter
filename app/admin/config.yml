@@ -5,8 +5,8 @@ backend:
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
-media_folder: "app/assets/img"
-public_folder: "/static/img"
+media_folder: "app/assets/images"
+public_folder: "/static/images"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -16,6 +16,7 @@ collections:
     name: "blog"
     folder: "app/content/posts/blog"
     create: true
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
@@ -29,7 +30,7 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
-   - label: "Events"
+  - label: "Events"
     name: "events"
     folder: "app/content/posts/events"
     create: true
@@ -38,6 +39,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
       - { label: "Event Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
@@ -63,18 +65,6 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "app/_data/quicklinks.yaml"
-        fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
       - label: "Meta Settings"
         name: "settings"
         file: "app/_data/settings.yaml"

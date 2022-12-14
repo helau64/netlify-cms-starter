@@ -15,6 +15,8 @@ module.exports = function (eleventyConfig) {
       "dd LLL yyyy"
     );
   });
+  
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON

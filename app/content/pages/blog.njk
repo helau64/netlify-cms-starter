@@ -1,0 +1,29 @@
+---
+title: Blog
+layout: "layouts/default.njk"
+permalink: "blog/"
+---
+
+<div>
+
+    <h1>{{title}}</h1>
+
+    {{ content | safe }}
+
+    {% set postslist = collections.blog %}
+
+    <ul>
+        {% for post in postslist | reverse %}
+            <li>
+                <a href="{{ post.url | url }}">
+                    {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>

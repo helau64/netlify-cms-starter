@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "start": "npm-run-all --parallel css eleventy browsersync",
+    "start": "npm-run-all --parallel css js eleventy browsersync",
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
+    "js": "esbuild app/assets/js/main.js --bundle --watch --outfile=_site/static/js/main.js",
     "css": "postcss app/assets/css/main.css --o _site/static/css/main.css --watch",
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production tailwindcss -i app/assets/css/main.css -o _site/static/css/main.css",
     "browsersync": "browser-sync start --server _site --files _site --port 8080 --no-notify --no-open"

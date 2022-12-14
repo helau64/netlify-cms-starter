@@ -1,0 +1,45 @@
+---
+title: Events
+layout: "layouts/default.njk"
+permalink: "events/"
+---
+
+<div>
+
+    <h1>{{title}}</h1>
+
+    {{ content | safe }}
+
+    {% set postslist = collections.events %}
+
+    <h2>Upcoming Events</h2>
+    <ul class="events-list--upcoming">
+        {% for post in postslist | reverse %}
+            <li data-date="{{post.data.date}}" class="events-list__item--upcoming">
+                <a href="{{ post.url | url }}">
+                    {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Previous Events</h2>
+    <ul class="events-list--previous">
+        {% for post in postslist | reverse %}
+            <li data-date="{{post.data.date}}" class="events-list__item--previous">
+                <a href="{{ post.url | url }}">
+                    {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
