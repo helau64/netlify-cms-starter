@@ -1,5 +1,7 @@
 ---
 items:
+  - text: About
+    url: "/about"
   - text: Blog
     url: "/blog"
   - text: Events
