@@ -1,0 +1,31 @@
+html, body {
+    @apply h-full;
+    scroll-padding-top: var(--nav-height);
+}
+
+body {
+    @apply flex flex-col;
+    @apply overflow-x-hidden;
+
+    padding-top: var(--nav-height);
+}
+
+.footer {
+    @apply flex-shrink-0;
+}
+
+.content {
+    flex: 1 0 auto;
+    justify-self: flex-start;
+}
+
+.full-width {
+    @apply w-full;
+    @apply relative;
+    @apply left-1/2;
+    @apply transform -translate-x-1/2;
+}
+
+.max-width {
+    max-width: var(--max-width);
+}

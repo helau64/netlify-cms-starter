@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  #BREAKPOINT-MIXINS
+\*------------------------------------*/
+
+@mixin min-width($breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+        @content;
+    }
+}
+
+@mixin max-width($breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: $breakpoint-value) {
+        @content;
+    }
+}
+
+@mixin between-widths($lower, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+
+    @media (min-width: $lower-breakpoint) and (max-width: $upper-breakpoint) {
+        @content;
+    }
+}

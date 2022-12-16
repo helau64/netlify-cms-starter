@@ -1,8 +1,6 @@
-<nav>
-    <!--Logo etc-->
+<nav class="navigation">
     <a href="/" aria-label="Home">Logo</a>
 
-    <!--Toggle button (hidden on large screens)-->
     <button aria-label="Menu">
         <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
@@ -10,7 +8,6 @@
         </svg>
     </button>
 
-    <!--Menu-->
     {% if navigation.items %}
         <ul>
             {% for item in navigation.items %}
