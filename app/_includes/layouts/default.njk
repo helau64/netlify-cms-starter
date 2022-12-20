@@ -16,7 +16,9 @@
   <body>
     {% include "partials/navigation.njk" %}
 
-    {{ content | safe }}
+    <main class="content">
+      {{ content | safe }}
+    </main>
 
     {% include "partials/footer.njk" %}
 

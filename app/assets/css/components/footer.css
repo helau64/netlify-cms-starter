@@ -1,0 +1,5 @@
+.footer__content {
+    @apply contained-width;
+    @apply text-center;
+    @apply py-8;
+}

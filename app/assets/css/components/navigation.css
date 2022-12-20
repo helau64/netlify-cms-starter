@@ -2,4 +2,20 @@
     @apply flex justify-between;
     @apply w-full;
     @apply contained-width;
+
+    height: $nav-height;
+}
+
+@include min-width(lg) {
+    .navigation {
+        @apply items-center;
+    }
+
+    .navigation__items {
+        @apply flex;
+    }
+
+    .navigation__item {
+        @apply ml-8;
+    }
 }

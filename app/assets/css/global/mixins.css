@@ -35,7 +35,7 @@
     .contained-width {
         @apply mx-auto;
 
-        max-width: rem(1240px);
+        max-width: $max-width;
         padding-left: rem(20px);
 	    padding-right: rem(20px);
 
