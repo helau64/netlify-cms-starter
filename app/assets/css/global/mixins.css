@@ -26,3 +26,27 @@
         @content;
     }
 }
+
+/*------------------------------------*\
+  #TAILWIND-MIXINS
+\*------------------------------------*/
+
+ @layer utilities {
+    .contained-width {
+        @apply mx-auto;
+
+        max-width: rem(1240px);
+        padding-left: rem(20px);
+	    padding-right: rem(20px);
+
+        @media screen(md) {
+            padding-left: rem(40px);
+            padding-right: rem(40px);
+        }
+
+        @media screen(xl) {
+            padding-left: rem(140px);
+            padding-right: rem(140px);
+        }
+    }
+ }

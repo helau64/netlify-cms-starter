@@ -1,5 +1,5 @@
 :root {
-	$max-width: rem(1440px);
+	$max-width: rem(1240px);
 	$max-text-width: rem(640px);
 	$nav-height: rem(158px);
 }

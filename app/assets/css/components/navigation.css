@@ -1,0 +1,5 @@
+.navigation {
+    @apply flex justify-between;
+    @apply w-full;
+    @apply contained-width;
+}
