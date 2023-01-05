@@ -23,12 +23,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
   // Copy Static Files to /_Site
+  eleventyConfig.addPassthroughCopy("./app/admin/config.yml");
+  eleventyConfig.addPassthroughCopy("./app/admin/index.html");
   eleventyConfig.addPassthroughCopy({
-    "./app/config.yml": "./admin/config.yml",
+    "./app/assets/images": "./static/images",
+    "./app/assets/fonts": "./static/fonts",
   });
-
-  // Copy Static Files to /_Site
-  eleventyConfig.addPassthroughCopy("./app/assets/img");
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./app/favicon.ico");
