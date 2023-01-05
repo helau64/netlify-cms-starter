@@ -1,5 +1,7 @@
 module.exports = {
-  content: ["./**/*.njk"],
+  content: [
+    './app/**/*.{html,njk}'
+  ],
   theme: {
     screens: {
       xxs: '350px',
