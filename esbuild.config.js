@@ -13,6 +13,7 @@ const config = {
     outfile: '_site/static/css/main.css',
     bundle: true,
     minify: true,
+    external: ['*.woff', '*.woff2', '*.ttf'],
     plugins: [
         postcss(),
     ],
