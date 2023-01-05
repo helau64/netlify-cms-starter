@@ -5,7 +5,8 @@ const chokidar = require('chokidar');
 const postcss = require('esbuild-postcss');
 
 const watchDirectories = [
-    './app/assets/css/**/*.css'
+    './app/assets/css/**/*.css',
+    './app/**/*.njk',
 ]
 
 const config = {
